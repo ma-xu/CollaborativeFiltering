@@ -1,0 +1,22 @@
+思路：
+1，makedata.m:
+	为了通过训练集生成用户，电影评分的一个二维矩阵，保存下来；
+2，getOneLine.m:
+	通过输入的用户id，组成对每个电影的评分向量；
+3，get_similarity.m:
+	获取相似度，取前五名
+4，get_film.m:
+	通过前5名相似度最高的用户，获取每一个评分为5分的电影，一起推荐产生结果。
+
+调用：
+	makedata.m可以事先执行一遍，为了节约时间已经执行过了，并将rating的矩阵保存起来了。
+	然后在命令窗口输入films = get_film(id);就出来了推荐的电影。
+	id必须是测试集中的用户id。
+	如： films = get_film(1);films;
+	这样就可以看见推荐的电影列表：
+	'2001: A Space Odyssey (1968)'
+    'Abyss, The (1989)'
+    'Akira (1988)'
+    'Aladdin (1992)'
+    'Alien (1979)'
+    。。。
